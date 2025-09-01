@@ -69,7 +69,7 @@ http://localhost:8080/transaction-management/swagger-ui/index.html
 The raw Swagger JSON can be accessed at:
 
 ```
-http://localhost:8080/transaction-management/v3/api-docs
+http://localhost:8080/transaction-management/api-docs
 ```
 
 Use this for integration with tools like Postman or other API clients.
