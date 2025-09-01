@@ -52,6 +52,28 @@ All endpoints are prefixed with: `/transaction-management`
 | `/actuator/beans` | Spring beans information |
 | `/actuator/env` | Environment variables |
 
+## API Documentation
+
+This application includes Swagger for API documentation. Swagger provides an interactive UI to explore and test the API endpoints.
+
+### Accessing Swagger UI
+
+Once the application is running, you can access the Swagger UI at:
+
+```
+http://localhost:8080/transaction-management/swagger-ui/index.html
+```
+
+### Swagger JSON
+
+The raw Swagger JSON can be accessed at:
+
+```
+http://localhost:8080/transaction-management/v3/api-docs
+```
+
+Use this for integration with tools like Postman or other API clients.
+
 ## Quick Start
 
 ### Prerequisites
