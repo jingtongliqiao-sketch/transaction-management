@@ -2,7 +2,7 @@ package com.hsbc.transactionmanagement.controller;
 
 import com.hsbc.transactionmanagement.constant.ErrorMessages;
 import com.hsbc.transactionmanagement.entity.Transaction;
-import com.hsbc.transactionmanagement.exception.DuplicateTransactionException;
+import com.hsbc.transactionmanagement.exception:q.DuplicateTransactionException;
 import com.hsbc.transactionmanagement.exception.TransactionNotFoundException;
 import com.hsbc.transactionmanagement.response.CommonResponse;
 import com.hsbc.transactionmanagement.response.PagedResponse;
