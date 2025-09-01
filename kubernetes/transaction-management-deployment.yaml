@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transaction-management
+  labels:
+    app: transaction-management
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: transaction-management
+  template:
+    metadata:
+      labels:
+        app: transaction-management
+    spec:
+      containers:
+        - name: transaction-management
+          image: transaction-management:{{APP_VERSION}}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_VERSION
+              value: "{{APP_VERSION}}"
+            - name: SERVER_SERVLET_CONTEXT_PATH
+              value: "/transaction-management"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /transaction-management/actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /transaction-management/actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
