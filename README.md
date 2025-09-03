@@ -206,4 +206,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For questions or support, contact the maintainer at [80809090@qq.com].
+For questions or support, contact the maintainer at [80996060@qq.com].
